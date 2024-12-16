@@ -43,12 +43,12 @@ public class Produto {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Produto produto = (Produto) o;
-        return codigo == produto.codigo && Double.compare(preco, produto.preco) == 0 && Objects.equals(descricao, produto.descricao);
+        return codigo == produto.codigo;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(codigo, descricao, preco);
+        return Objects.hashCode(codigo);
     }
 
     @Override
