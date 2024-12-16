@@ -21,4 +21,12 @@ public class ProdutoDao {
         return produtos;
     }
 
+    public boolean remover(Produto produto){
+        return produtos.remove(produto);
+    }
+
+    public boolean update(Produto produto){
+        return produtos.remove(produto) && produtos.add(produto);
+    }
+
 }
